@@ -1,8 +1,6 @@
-# Webpack Frontend Starterkit
+# js-error-handling
 
-[![Dependabot badge](https://flat.badgen.net/dependabot/wbkd/webpack-starter?icon=dependabot)](https://dependabot.com/)
-
-A lightweight foundation for your next webpack based frontend project.
+Implementação de meu estudo sobre tratamento de erros no javascript.
 
 ### Installation
 
@@ -22,12 +20,19 @@ npm start
 npm run build
 ```
 
-### Features:
+## Demo:
 
-- ES6 Support via [babel](https://babeljs.io/) (v7)
-- JavaScript Linting via [eslint](https://eslint.org/)
-- SASS Support via [sass-loader](https://github.com/jtangelder/sass-loader)
-- Autoprefixing of browserspecific CSS rules via [postcss](https://postcss.org/) and [postcss-preset-env](https://github.com/csstools/postcss-preset-env)
-- Style Linting via [stylelint](https://stylelint.io/)
+[js-error-handling.guilhermerodri8.repl.co](https://js-error-handling.guilhermerodri8.repl.co)
 
-When you run `npm run build` we use the [mini-css-extract-plugin](https://github.com/webpack-contrib/mini-css-extract-plugin) to move the css to a separate file. The css file gets included in the head of the `index.html`.
+Replit: [https://replit.com/@GuilhermeRodri8/js-error-handling#](https://replit.com/@GuilhermeRodri8/js-error-handling#)
+
+## Deploy Replit
+
+- https://unix.stackexchange.com/questions/77127/rm-rf-all-files-and-all-hidden-files-without-error
+
+```sh
+rm -rf ..?* .[!.]* * && \
+git clone https://github.com/guilhermerodrigues680/js-error-handling.git js-error-handling && \
+mv js-error-handling/server-echo/* . && \
+rm -rf js-error-handling
+```
