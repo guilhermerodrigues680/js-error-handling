@@ -15,6 +15,7 @@ app.use(
   )
 );
 app.use(cors());
+app.use("/", express.static(__dirname + "/public"));
 
 app.get("/status/:status", (req, res) => {
   if (req.params.status == null || !isNumeric(req.params.status)) {

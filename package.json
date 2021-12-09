@@ -6,7 +6,8 @@
     "lint": "npm run lint:styles; npm run lint:scripts",
     "lint:styles": "stylelint src",
     "lint:scripts": "eslint src",
-    "build": "cross-env NODE_ENV=production webpack --config webpack/webpack.config.prod.js",
+    "copy_build_to_public": "rm -rf server-echo/public && cp -rp build server-echo/public",
+    "build": "cross-env NODE_ENV=production webpack --config webpack/webpack.config.prod.js; npm run copy_build_to_public",
     "serve": "webpack serve --config webpack/webpack.config.dev.js"
   },
   "license": "MIT",

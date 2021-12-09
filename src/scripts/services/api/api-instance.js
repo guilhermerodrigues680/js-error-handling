@@ -1,7 +1,12 @@
 import axios from "axios";
 
+let baseURL = "/";
+if (process.env.NODE_ENV === "development") {
+  baseURL = "http://localhost:9999/";
+}
+
 const apiInstance = axios.create({
-  baseURL: "http://localhost:9999/",
+  baseURL: baseURL,
   timeout: 10000,
 });
 
