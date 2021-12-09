@@ -20,7 +20,6 @@ const formSendRequestDelayElem = document.querySelector(
 formSendRequestStatusCodeElem.addEventListener("submit", async (event) => {
   event.preventDefault();
   const logsElem = document.querySelector("#logs");
-
   const log = document.createElement("div");
   log.appendChild(document.createTextNode(`${new Date().toLocaleString()} `));
 
@@ -66,7 +65,6 @@ formSendRequestStatusCodeElem.addEventListener("submit", async (event) => {
 formSendRequestDelayElem.addEventListener("submit", async (event) => {
   event.preventDefault();
   const logsElem = document.querySelector("#logs");
-
   const log = document.createElement("div");
   log.appendChild(document.createTextNode(`${new Date().toLocaleString()} `));
 
@@ -78,20 +76,7 @@ formSendRequestDelayElem.addEventListener("submit", async (event) => {
   } catch (error) {
     console.debug({ error });
     log.appendChild(document.createTextNode(error.message));
-
-    // Faça alguma coisa dependendo do tipo de erro
-    // https://seanbarry.dev/posts/switch-true-pattern
-    switch (true) {
-      case error instanceof api.NetworkError:
-        console.debug("Erro NetworkError");
-        break;
-      default:
-        console.debug("Erro default");
-        break;
-    }
   } finally {
     logsElem.insertAdjacentElement("beforeend", log);
   }
 });
-
-console.debug(api);
