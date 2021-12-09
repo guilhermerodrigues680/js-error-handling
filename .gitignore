@@ -3,7 +3,7 @@ node_modules
 
 # production
 build
-/server-echo/public
+# /server-echo/public
 
 # misc
 .DS_Store
